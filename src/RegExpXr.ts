@@ -74,7 +74,7 @@ export default class RegExpXr extends RegExp {
   }
 
   public add(content: RegExp) {
-    return new RegExpXr(new RegExp(`${this.regex}${content}`));
+    return new RegExpXr(new RegExp(`${this.regex}${content.source}`));
   }
 
   public or(content?: RegExp) {
